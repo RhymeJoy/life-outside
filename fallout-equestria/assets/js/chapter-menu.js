@@ -5,8 +5,8 @@
     text: "卷一",
     opener: true,
     children: [
-      { text: "前言:關於嗶嗶小馬和可愛標誌", href: "prologue.html" },
-    //   { text: "第一章:", href: "#" },
+      	{ text: "前言:關於嗶嗶小馬和可愛標誌", href: "prologue.html" },
+    	{ text: "第一章:廄外的世界", href: "chapter1.html" },
     //   { text: "第二章:", href: "#" },
     //   { text: "第三章:", href: "#" },
     //   { text: "第四章:", href: "#" },
@@ -131,4 +131,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
+
 });
