@@ -155,11 +155,27 @@
 				$body.on('click touchend', function(event) {
 
 					// >large? Bail.
-						if (breakpoints.active('>large'))
-							return;
+					if (breakpoints.active('>large'))
+						return;
+
+					var $target = $(event.target);
+
+					// 如果點擊的是 toggle，則切換 sidebar 狀態
+					if (
+						$target.hasClass('toggle') ||
+						$target.closest('.toggle').length > 0
+					) {
+						$sidebar.toggleClass('inactive');
+						return;
+					}
+
+					// 如果點擊的是 sidebar 內部，不收闔
+					if ($target.closest('#sidebar').length > 0) {
+						return;
+					}
 
 					// Deactivate.
-						$sidebar.addClass('inactive');
+					$sidebar.addClass('inactive');
 
 				});
 
@@ -258,5 +274,17 @@
 				});
 
 			});
+
+		// 章節目錄按鈕開啟/關閉側邊欄
+		$(document).on('click', 'button.menu', function(event) {
+			event.preventDefault();
+			event.stopPropagation();
+			// 僅在側邊欄為關閉狀態時才打開
+			if ($sidebar.hasClass('inactive')) {
+				$sidebar.removeClass('inactive');
+			} else {
+				$sidebar.addClass('inactive');
+			}
+		});
 
 })(jQuery);
