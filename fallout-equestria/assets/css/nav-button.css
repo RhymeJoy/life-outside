@@ -1,0 +1,77 @@
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto 2.5em auto;
+  gap: 20px;
+  text-align: center;
+}
+
+.chapter-navigation .nav-button,
+.chapter-navigation .menu {
+  padding: 10px 15px;
+  font-size: 1.35rem;
+  cursor: pointer;
+  background-color: #1056a1;
+  color: rgb(255, 255, 255) !important;
+  border-radius: 15px;
+  transition: background-color 0.2s;
+  width: 7.5em;
+  height: 2.5em;
+  margin-bottom: -0.5em;
+  margin-top: 0;
+  line-height: 1.2;
+  vertical-align: middle;
+  font-family: LXGW WenKai Mono TC, "Roboto Slab", serif;
+  box-shadow: none !important;
+  display: inline-block;
+}
+
+.chapter-navigation .nav-button:hover,
+.chapter-navigation .menu:hover {
+  background-color: #2272c7;
+}
+
+.chapter-navigation .nav-button:active,
+.chapter-navigation .menu:active {
+  background-color: #5922c7;
+  transition: background-color 0.1s;
+}
+
+@media screen and (max-width: 980px) {
+  .chapter-navigation {
+    margin: 0 auto;
+    width: 90%;
+    gap: 2em;
+  }
+  .chapter-navigation .nav-button,
+  .chapter-navigation .menu {
+    font-size: 1.15rem;
+    width: 7em;
+    padding: 8px 6px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .chapter-navigation {
+    width: 100%;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    align-items: center;
+  }
+  .chapter-navigation .nav-button,
+  .chapter-navigation .menu {
+    width: 100%;
+    max-width: 7.5em;
+    height: 2.75em;
+    /* 讓按鈕左右置中 */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    padding: 10px 0;
+    margin-bottom: 0;
+    display: block;
+  }
+}
+
