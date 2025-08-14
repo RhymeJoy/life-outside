@@ -1,6 +1,6 @@
 // 章節資料
 		const chapters = [
-  { text: "序幕", href: "index.html" },
+  { text: "序幕", href: "./" },
   {
     text: "卷一",
     opener: true,
@@ -133,3 +133,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+
